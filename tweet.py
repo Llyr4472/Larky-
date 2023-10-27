@@ -26,7 +26,7 @@ auth = tweepy.OAuth1UserHandler(
 api =tweepy.API(auth)
 
 def joke():
-    joke= pyjokes.get_joke()
+    joke= requests.get("https://v2.jokeapi.dev/joke/Any?type=single").json()["joke"]
     response = client.create_tweet(text=joke)
     print(f"Tweet posted: https://twitter.com/user/status/{response.data['id']}")
 
@@ -52,6 +52,6 @@ def meme():
     
     #get rid of meme file
     os.remove("meme_temp.jpg")
-
-meme()
+    
+joke()
 # End of the script
