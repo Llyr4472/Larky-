@@ -1,6 +1,6 @@
 import os
 import tweepy
-import pyjokes
+import random
 import configparser
 import requests
 
@@ -53,5 +53,10 @@ def meme():
     #get rid of meme file
     os.remove("meme_temp.jpg")
     
-joke()
+def main():
+    tweet = random.choice([joke,meme])
+    tweet()
+
+if __name__ == '__main__':
+    main()
 # End of the script
