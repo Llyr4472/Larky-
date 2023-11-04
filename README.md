@@ -2,6 +2,13 @@
 
 Larky is a Python-based Twitter bot designed to automate content posting on the Twitter platform. This repository serves as the home for the codebase and documentation related to Larky.
 
+## Follow Larky on Twitter
+
+Click the button below to follow Larky on Twitter and enjoy daily cat-related content:
+
+[![Follow Larky on Twitter](https://img.shields.io/twitter/follow/__Larky?label=Follow%20Larky&style=social)](https://twitter.com/__Larky)
+
+
 ## Features
 
 - Automated posting of content on Twitter.
