@@ -3,6 +3,7 @@ import tweepy
 import random
 import configparser
 import requests
+import time
 
 # Read credentials from config
 config = configparser.ConfigParser()
@@ -54,8 +55,13 @@ def meme():
     os.remove("meme_temp.jpg")
     
 def main():
-    tweet = random.choice([joke,meme])
-    tweet()
+    while True:
+        tweet = random.choice([joke,meme])
+        try:
+            tweet()
+        except e:
+            print(e)
+        time.sleep(30*60)
 
 if __name__ == '__main__':
     main()
